@@ -13,14 +13,19 @@ namespace WinformProject
         private string email;
         private string khoa;
         private string nganh;
-        public GV(string maHocSinh, string ten, string email, string khoa, string nganh)
+        private string ngaysinh;
+        private string gioitinh;
+        private string sdt;
+        public GV(string maHocSinh, string ten, string email, string khoa, string nganh, string ngaysinh, string gioitinh, string sdt)
         {
             this.maGiaoVien = maGiaoVien;
             this.ten = ten;
             this.email = email;
             this.khoa = khoa;
             this.nganh = nganh;
-
+            this.ngaysinh = ngaysinh;
+            this.gioitinh = gioitinh;
+            this.sdt = sdt;
         }
         public string MaGiaoVien
         {
@@ -41,6 +46,18 @@ namespace WinformProject
         public string Nganh
         {
             get { return this.nganh; }
+        }
+        public string NgaySinh
+        {
+            get { return this.ngaysinh; }
+        }
+        public string GioiTinh
+        {
+            get { return this.gioitinh; }
+        }
+        public string SDT
+        {
+            get { return this.sdt; }
         }
     }
 }

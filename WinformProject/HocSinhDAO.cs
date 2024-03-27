@@ -21,7 +21,7 @@ namespace WinformProject
         public void Add(HS hs)
         {
             
-        string sqlStr = string.Format("INSERT INTO HocSinh(MaHocSinh, Ten, Email, Khoa, Nganh, ID_GiaoVien, ID_LuanVan) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}')",hs.MaHocSinh, hs.Ten,hs.Email,hs.Khoa,hs.Nganh,hs.ID_GiaoVien,hs.ID_LuanVan);
+        string sqlStr = string.Format("INSERT INTO HocSinh(MaHocSinh, Ten, Email, Khoa, Nganh, NgaySinh, GioiTinh, SDT, ID_GiaoVien, ID_LuanVan) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}','{9}')",hs.MaHocSinh, hs.Ten,hs.Email,hs.Khoa,hs.Nganh,hs.NgaySinh,hs.GioiTinh ,hs.SDT ,hs.ID_GiaoVien,hs.ID_LuanVan);
             dbcon.Execuate(sqlStr);
         }
         public void Delete(HS hs)
@@ -31,7 +31,7 @@ namespace WinformProject
         }
         public void Change(HS hs)
         {
-            string sqlStr = string.Format("UPDATE HocSinh SET Ten='{0}', Email ='{1}', Khoa = '{2}', Nganh = '{3}', ID_GiaoVien = '{4}', ID_LuanVan = '{5}' WHERE MaHocSinh = '{6}'", hs.Ten, hs.Email, hs.Khoa, hs.Nganh, hs.ID_GiaoVien, hs.ID_LuanVan, hs.MaHocSinh);
+            string sqlStr = string.Format("UPDATE HocSinh SET Ten='{0}', Email ='{1}', Khoa = '{2}', Nganh = '{3}',NgaySinh = '{4}', GioiTinh = '{5}', SDT = '{6}' , ID_GiaoVien = '{7}', ID_LuanVan = '{8}' WHERE MaHocSinh = '{9}'", hs.Ten, hs.Email, hs.Khoa, hs.Nganh, hs.NgaySinh, hs.GioiTinh, hs.SDT, hs.ID_GiaoVien, hs.ID_LuanVan, hs.MaHocSinh);
             dbcon.Execuate(sqlStr);
         }
     }

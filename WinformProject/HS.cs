@@ -14,15 +14,21 @@ namespace WinformProject
         private string email;
         private string khoa;
         private string nganh;
+        private string ngaysinh;
+        private string gioitinh;
+        private string sdt;
         private string id_GiaoVien;
         private string id_LuanVan;
-        public HS(string maHocSinh, string ten, string email, string khoa, string nganh, string id_GiaoVien, string id_LuanVan)
+        public HS(string maHocSinh, string ten, string email, string khoa, string nganh, string ngaysinh, string gioitinh, string sdt, string id_GiaoVien, string id_LuanVan)
         {
             this.maHocSinh = maHocSinh;
             this.ten = ten;
             this.email = email;
             this.khoa = khoa;
             this.nganh = nganh;
+            this.ngaysinh = ngaysinh ;
+            this.gioitinh = gioitinh ;
+            this.sdt = sdt ;
             this.id_GiaoVien = id_GiaoVien;
             this.id_LuanVan = id_LuanVan;
         }
@@ -45,6 +51,18 @@ namespace WinformProject
         public string Nganh
         {
             get { return this.nganh; }
+        }
+        public string NgaySinh
+        {
+            get { return this.ngaysinh; }
+        }
+        public string GioiTinh
+        {
+            get { return this.gioitinh; }
+        }
+        public string SDT
+        {
+            get { return this.sdt; }
         }
         public string ID_GiaoVien
         {
