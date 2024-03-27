@@ -11,7 +11,7 @@ namespace WinformProject
 {
     internal class DBconnection
     {
-        SqlConnection conn = new SqlConnection("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QLHS2;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=D:\\WORK\\FINAL_PROJECT_WIN\\FINAL_PROJECT_WINFORM\\DATABASE\\QUANLYLUANVAN.MDF;Integrated Security=True;Connect Timeout=30");
         public DataTable Load(string sqlStr)
         {
             DataTable dtSinhVien = new DataTable();
