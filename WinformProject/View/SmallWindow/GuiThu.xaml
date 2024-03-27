@@ -1,0 +1,29 @@
+﻿<Window x:Class="WinformProject.View.SmallWindow.GuiThu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ucDesign="clr-namespace:WinformProject.View.Design"
+        xmlns:local="clr-namespace:WinformProject.View.SmallWindow"
+        mc:Ignorable="d"
+        Title="GuiThu" Height="300" Width="600"
+        Background="LightYellow"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <ucDesign:CustomText Text_ThongTin="Người Nhận" Width="300" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <ucDesign:CustomText Text_ThongTin="Tin Nhắn" Width="450" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Button Grid.Row="2" x:Name="btnGuiThu" Click="btnGuiThu_Click" Width="100" Height="50" Content="Đăng ký" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

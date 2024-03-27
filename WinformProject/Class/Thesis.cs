@@ -10,17 +10,14 @@ namespace WinformProject.Class
     {
         Random random = new Random();
         public string ThesisID { get; set; }
-        public string StudentID { get; set; }
         public string ThesisName { get; set; }
-        public string Status { get; set; }
-        public string Reason { get; set; }
+        public string Describe {  get; set; }
 
-        public Thesis(string StudentID, string ThesisName, string Reason)
+        public Thesis(string ThesisID, string ThesisName, string Describe)
         {
-            this.StudentID = StudentID;
+            this.ThesisID = ThesisID;
             this.ThesisName = ThesisName;
-            this.Reason = Reason;
-            Status = "Chua Duoc Duyet";
+            this.Describe = Describe;
             ThesisID = random.Next(1, 1000).ToString("D3");
         }
     }

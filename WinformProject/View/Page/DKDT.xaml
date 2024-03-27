@@ -16,7 +16,7 @@
             <RowDefinition Height="0.2*"/>
         </Grid.RowDefinitions>
         <uc:DKDTBar x:Name="DKDTBar" Grid.Row="1"/>
-        <DataGrid Grid.Row="2"/>
+        <DataGrid x:Name="gv_DeTai" Grid.Row="2" LoadingRow="dataGrid_LoadingRow" AlternationCount="2"/>
         <Button Grid.Row="3" x:Name="btn_DangKy" Content="Đăng Ký" Click="ButtonDangKy_Click" Height="50" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
         
     </Grid>

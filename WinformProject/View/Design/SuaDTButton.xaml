@@ -25,9 +25,9 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Thêm" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Button Grid.Column="1" Content="Xóa" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Button Grid.Column="2" Content="Sửa" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button x:Name="btnThem" Grid.Column="0" Content="Thêm" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button x:Name="btnXoa" Grid.Column="1" Content="Xóa" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button x:Name="btnSua" Grid.Column="2" Content="Sửa" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
         </Grid>
     </Grid>

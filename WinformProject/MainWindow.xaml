@@ -29,7 +29,7 @@
             </Grid>
             <!--<ucDesign:StudentButton x:Name="btnBarStudent" Grid.Row="1" />-->
         </Grid>
-        <ucPage:Home Grid.Column="1" x:Name="pageHome" />
-        <Canvas Grid.Column="1" Name="canvas" Background="Transparent"/>
+        <ucPage:Home Grid.Column="1" x:Name="pageHome" Panel.ZIndex="1"/>
+        <Canvas Grid.Column="1" Name="canvas" Background="Transparent" Panel.ZIndex="2"/>
     </Grid>
 </Window>

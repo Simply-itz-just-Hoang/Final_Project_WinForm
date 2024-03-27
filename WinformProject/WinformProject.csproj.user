@@ -49,6 +49,12 @@
     <Compile Update="View\SmallWindow\DKDT2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\SmallWindow\GuiThu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SmallWindow\ThemSua.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Login.xaml">
@@ -94,6 +100,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SmallWindow\DKDT2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SmallWindow\GuiThu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SmallWindow\ThemSua.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

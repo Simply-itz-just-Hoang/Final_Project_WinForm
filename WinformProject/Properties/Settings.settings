@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="connStr" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=(localdb)\mssqllocaldb;Initial Catalog=QuanLyLuanVan;Integrated Security=True;Pooling=False</Value>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Desktop\DBMS\WinformProject\database\QuanLyLuanVan.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

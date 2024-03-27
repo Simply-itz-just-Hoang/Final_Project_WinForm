@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +26,8 @@ namespace WinformProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Kết nối database
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         //Page cho form HS
         ThongTin thongTin = new ThongTin();
         BaoCao baoCao = new BaoCao();
@@ -38,9 +42,14 @@ namespace WinformProject
         //btn Đăng Ký cho window phụ DKDT
         private DKDT1 dkdt1 = new DKDT1(); //cửa sổ đk đề tài tự chọn
         private DKDT2 dkdt2 = new DKDT2(); //cửa sổ đk đề tài có sẵn
+        //form chỉnh sửa đề tài
+        private ThemSua them = new ThemSua();
+        private ThemSua sua = new ThemSua();
         public MainWindow()
         {
             InitializeComponent();
+            //set form bắt đầu
+            Panel.SetZIndex(pageHome, 3);
             this.SizeChanged += MainWindow_SizeChanged;
             //HS
             btnBarStudent.btnHome.Click += btnHomeClick;
@@ -56,6 +65,11 @@ namespace WinformProject
             DKDT.btn_DangKy.Click += ButtonDangKy_Click;
             dkdt1.btnDangKy.Click += BtnDangKyTuChon_Click;
             dkdt2.btnDangKy.Click += BtnDangKyCoSan_Click;
+            //gán cho btn Thêm sửa đề tài
+            dSDT.suaDTButton.btnThem.Click += BtnThemDeTai_Click;
+            dSDT.suaDTButton.btnSua.Click += BtnSuaDeTai_Click;
+            dSDT.suaDTButton.btnXoa.Click += BtnXoaDeTai_Click;
+            //cho database vào gv
         }
 
         //xử lý chiều cao, rộng uc khi size của cửa sổ thay đổi
@@ -95,6 +109,7 @@ namespace WinformProject
         private void closeAllPage()
         {
             canvas.Children.Clear();
+            Panel.SetZIndex(pageHome, 1);
         }
 
         //button Home
@@ -107,6 +122,7 @@ namespace WinformProject
             //GV
             pageClose(dSDT);
             pageClose(xemBaoCao);
+            Panel.SetZIndex(pageHome, 3);
         }
 
         //btn HS
@@ -174,13 +190,13 @@ namespace WinformProject
         {
             if (DKDT.DKDTBar.btn1.IsEnabled == false) //đk đề tài tự chọn
             {
-                //dkdt1 = new DKDT1();
-                dkdt1.Show();
+                dkdt1 = new DKDT1();
+                dkdt1.ShowDialog();
             }
             else if (DKDT.DKDTBar.btn2.IsEnabled == false) //đk đề tài có sẵn
             {
-                //dkdt2 = new DKDT2();
-                dkdt2.Show();
+                dkdt2 = new DKDT2();
+                dkdt2.ShowDialog();
             }
         }
 
@@ -192,5 +208,26 @@ namespace WinformProject
         {
             MessageBox.Show("Đăng Ký Thành Công");
         }
+
+        // xử lý chỉnh sửa đề tài cho giáo viên
+        private void BtnThemDeTai_Click(object sender, RoutedEventArgs e)
+        {
+            them = new ThemSua();
+            them.btnXuly.Content = "Thêm";
+            them.ShowDialog();
+        }
+        private void BtnSuaDeTai_Click(object sender, RoutedEventArgs e)
+        {
+            sua = new ThemSua();
+            sua.btnXuly.Content = "Sửa";
+            sua.ShowDialog();
+        }
+        private void BtnXoaDeTai_Click(Object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Xóa Thành Công");
+        }
+        //Hàm load database vào Grid View
+
+
     }
 }

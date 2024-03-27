@@ -56,3 +56,8 @@ D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\Smal
 D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\DKDT2.g.cs
 D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\DKDT1.baml
 D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\DKDT2.baml
+D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\WinformProject.sourcelink.json
+D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\ThemSua.g.cs
+D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\ThemSua.baml
+D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\GuiThu.g.cs
+D:\Desktop\DBMS\WinformProject\WinformProject\obj\Debug\net6.0-windows\View\SmallWindow\GuiThu.baml

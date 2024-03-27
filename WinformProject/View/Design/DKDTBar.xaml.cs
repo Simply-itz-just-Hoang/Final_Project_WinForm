@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +22,13 @@ namespace WinformProject.View.Design
     /// </summary>
     public partial class DKDTBar : UserControl
     {
+        //Kết nối database
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        //public DataGrid gv = new DataGrid();
+        //thông số chiều cao của btn
         public int hight1 =40;
         public int hight2 = 30;
+
         public DKDTBar()
         {
             InitializeComponent();
@@ -55,6 +62,28 @@ namespace WinformProject.View.Design
         {
             lockBtn(btn3);
         }
+        public void LoadGridView(DataGrid gv , string str1, string str2)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM " + str1 + str2);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                gv.ItemsSource = dt.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
     }
     
 }

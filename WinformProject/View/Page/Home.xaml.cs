@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WinformProject.View.SmallWindow;
 
 namespace WinformProject.View.Page
 {
@@ -23,6 +24,12 @@ namespace WinformProject.View.Page
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void BtnGuiThu_Click(object sender, RoutedEventArgs e)
+        {
+            GuiThu guiThu = new GuiThu();
+            guiThu.ShowDialog();
         }
     }
 }
